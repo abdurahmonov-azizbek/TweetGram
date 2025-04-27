@@ -6,7 +6,7 @@ CREATE TABLE users (
     email TEXT,
     password_hash TEXT NOT NULL,
     status_id INTEGER NOT NULL,
-    created_time TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW() AT TIME ZONE 'UTC',
+    created_time TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     modified_time TIMESTAMP WITH TIME ZONE,
     
     CONSTRAINT fk_users_status_id FOREIGN KEY (status_id) REFERENCES statuses(id)

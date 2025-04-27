@@ -5,7 +5,7 @@ CREATE TABLE messages (
     group_id INTEGER,
     content TEXT, 
     status_id INTEGER NOT NULL,
-    created_time TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW() AT TIME ZONE 'UTC',
+    created_time TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     modified_time TIMESTAMP WITH TIME ZONE,
     CONSTRAINT fk_messages_sender FOREIGN KEY (sender_id) REFERENCES users(id),
     CONSTRAINT fk_messages_receiver FOREIGN KEY (receiver_id) REFERENCES users(id),
