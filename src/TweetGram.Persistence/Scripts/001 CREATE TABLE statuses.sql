@@ -1,0 +1,6 @@
+CREATE TABLE statuses (
+    id INTEGER NOT NULL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+
